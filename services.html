@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Services | DAGA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="brand">DAGA</div>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="services.html">Services</a>
+        <a href="planner.html">Trip Planner</a>
+        <a href="my-trips.html">My Trips</a>
+        <a href="bookings.html">Bookings</a>
+        <a href="tourist-dashboard.html">Dashboard</a>
+    </nav>
+</header>
+
+<section class="business-dashboard-hero">
+    <h2>Discover Local Experiences</h2>
+    <p>Explore services offered by local tourism businesses.</p>
+</section>
+
+<main class="service-management-container">
+    <div class="service-search-area">
+        <input type="text" id="serviceSearch"
+            placeholder="Search services or locations...">
+
+        <select id="serviceCategoryFilter">
+            <option value="">All Categories</option>
+            <option value="Accommodation">Accommodation</option>
+            <option value="Food Experience">Food Experience</option>
+            <option value="Tour Guide">Tour Guide</option>
+            <option value="Adventure">Adventure</option>
+            <option value="Handicrafts">Handicrafts</option>
+            <option value="Cultural Activities">Cultural Activities</option>
+            <option value="Other">Other</option>
+        </select>
+    </div>
+
+    <div id="touristServicesList" class="managed-services-grid">
+        <p>Loading services...</p>
+    </div>
+</main>
+
+<footer>
+    <p>© 2026 DAGA - Discover Around Go Again</p>
+</footer>
+
+<script src="services.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Dashboard | DAGA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="business-dashboard-header">
+        <h1>DAGA</h1>
+        <nav>
+            <a href="business-dashboard.html">Dashboard</a>
+            <a href="#business-details">My Business</a>
+            <a href="#services">My Services</a>
+            <a href="#requests">Booking Requests</a>
+            <a href="home.html">Visit Website</a>
+            <a href="owner-bookings.html">Booking Requests</a>
+            <a href="tourist-dashboard.html">Dashboard</a>
+            <button class="business-logout-btn" onclick="businessLogout()">Logout</button>
+        </nav>
+    </header>
+    <section class="dashboard-section">
+    <h2>Business Profile</h2>
+    <p>Business Name: <span id="dashboardBusinessName"></span></p>
+    <p>Location: <span id="dashboardLocation"></span></p>
+    <p>Category: <span id="dashboardCategory"></span></p>
+    <p>Email: <span id="dashboardEmail"></span></p>
+</section>
+
+    <section class="business-dashboard-hero">
+        <h2>Business Owner Dashboard</h2>
+        <p>Welcome to your DAGA business management portal!</p>
+    </section>
+
+    <main class="business-dashboard-container">
+
+        <section class="business-welcome-card">
+            <h2 id="ownerWelcome">Welcome, Business Owner!</h2>
+            <p>Manage your local tourism business and connect with travellers.</p>
+        </section>
+
+        <section class="business-stats">
+
+            <div class="business-stat-card">
+                <h3>12</h3>
+                <p>Total Bookings</p>
+            </div>
+
+            <div class="business-stat-card">
+                <h3>5</h3>
+                <p>Pending Requests</p>
+            </div>
+
+            <div class="business-stat-card">
+                <h3>4.8</h3>
+                <p>Average Rating</p>
+            </div>
+
+        </section>
+
+        <section id="business-details" class="business-dashboard-section">
+            <h2>My Business</h2>
+
+            <div class="business-info-card">
+                <h3>Manage Your Services</h3>
+                <p>Add, edit or remove the services offered by your business.</p>
+                <a href="business-services.html">
+                <button type="button">Manage Services</button>
+                </a>
+            </div>
+        </section>
+
+        <section id="services" class="business-dashboard-section">
+            <h2>My Services</h2>
+
+            <div class="owner-service-grid">
+
+                <div class="owner-service-card">
+                    <h3>Homestay Accommodation</h3>
+                    <p>Price: ₹2500 / day</p>
+                    <p>Status: Available</p>
+                    <button onclick="editService('Homestay Accommodation')">Edit</button>
+                </div>
+
+                <div class="owner-service-card">
+                    <h3>Traditional Food Experience</h3>
+                    <p>Price: ₹500 / person</p>
+                    <p>Status: Available</p>
+                    <button onclick="editService('Traditional Food Experience')">Edit</button>
+                </div>
+
+            </div>
+
+            <button class="add-service-btn" onclick="addService()">
+                + Add New Service
+            </button>
+        </section>
+
+        <section id="requests" class="business-dashboard-section">
+            <h2>Booking Requests</h2>
+
+            <div class="owner-booking-card">
+                <h3>Booking Request #001</h3>
+                <p><strong>Tourist:</strong> Rahul</p>
+                <p><strong>Service:</strong> Homestay Accommodation</p>
+                <p><strong>Date:</strong> 15 December 2026</p>
+                <p><strong>People:</strong> 2</p>
+                <p><strong>Status:</strong> Pending</p>
+
+                <button onclick="updateRequest('confirmed')">Accept</button>
+                <button class="reject-btn" onclick="updateRequest('rejected')">Reject</button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="business-dashboard.js"></script>
+
+</body>
+</html>
